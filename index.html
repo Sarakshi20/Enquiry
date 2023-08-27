@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Roboto+Mono:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Enquiry Management System</h1>
+    <form>
+        <div id="main-box">
+            <div id="circle">
+                <div id="query-box">
+                    <input type="text" id="title" class="input" placeholder="Estimate title" required />
+
+                    <div class="drop">
+                        <div id="category" class="dropbtn">Select Category</div>
+                        <ul id="dropdown-content-1">
+                            <li>Electronics</li>
+                            <li>Clothing</li>
+                            <li>Books</li>
+                            <li>Home Appliances</li>
+                            <li>Sports Equipment</li>
+                        </ul>
+                    </div>
+
+                    <div class="drop">
+                        <div id="product" class="dropbtn">Select Product</div>
+                        <ul id="dropdown-content-2">
+                        </ul>
+                    </div>
+
+                    <input type="number" id="quantity" class="input" placeholder="Quantity" required />
+                    <button id="add" type="submit">ADD</button>
+                </div>
+            </div>
+            <div id="display-box">
+                <h2>Enquiry</h2>
+                <div id="display">
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
