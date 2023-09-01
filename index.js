@@ -11,7 +11,6 @@ let arr = [];
 let list = document.querySelectorAll("#dropdown-content-1 li");
 let list2 = [];
 let selected_item_2 = document.querySelector("#product");
-let btn = [];
 
 list.forEach(ele => {
     ele.addEventListener("click", () => {
@@ -118,6 +117,7 @@ function handleForm(event) {
     event.preventDefault();
 }
 
+// deleting enquiry
 function del(index) {
     li.splice(index, 1);
     num.splice(index, 1);
@@ -129,3 +129,16 @@ function del(index) {
         document.getElementById("display").appendChild(item);
     });
 }
+
+
+document.getElementById("Submit").addEventListener("click",() => {
+    document.getElementById("display").innerHTML = ' ';
+    li.forEach((element, i) => {
+        var item = document.createElement('div');
+        item.innerHTML = `<h3>${element}</h3> <h3>${num[i]}</h3>`;
+        document.getElementById("display").appendChild(item);
+    });
+
+    document.getElementById("Submit").style.display = "none";
+    document.getElementById("circle").style.display = "none";
+});
